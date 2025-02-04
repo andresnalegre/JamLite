@@ -1,0 +1,114 @@
+.library-container {
+    display: flex;
+    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.library-left {
+    width: 30%;
+    padding: 20px;
+    background-color: #121212;
+    overflow-y: auto;
+    border-right: 1px solid #282828;
+}
+
+.library-right {
+    width: 70%;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #121212;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1db954;
+    text-align: left;
+}
+
+.playlist-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #282828;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-item:hover {
+    background-color: #1db954;
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.playlist-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.playlist-info h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.playlist-info p {
+    font-size: 0.85rem;
+    color: #b3b3b3;
+    margin: 5px 0 0;
+}
+
+.no-playlists {
+    color: #b3b3b3;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.library-left::-webkit-scrollbar,
+.library-right::-webkit-scrollbar {
+    width: 8px;
+}
+
+.library-left::-webkit-scrollbar-track,
+.library-right::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.library-left::-webkit-scrollbar-thumb,
+.library-right::-webkit-scrollbar-thumb {
+    background: #282828;
+    border-radius: 4px;
+}
+
+.library-left::-webkit-scrollbar-thumb:hover,
+.library-right::-webkit-scrollbar-thumb:hover {
+    background: #1db954;
+}
